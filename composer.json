@@ -1,12 +1,9 @@
 {
-  "name": "tegos/guzzle-cookie-example",
   "license": "MIT",
   "description": "guzzle-cookie-example",
   "require": {
-    "jaeger/querylist": "^4.0",
     "guzzlehttp/guzzle": "~6.0",
-    "paquettg/php-html-parser": "^1.7",
-    "ivopetkov/html5-dom-document-php": "^0.5.9"
+    "sunra/php-simple-html-dom-parser": "^1.5"
   },
   "autoload": {
     "psr-4": {

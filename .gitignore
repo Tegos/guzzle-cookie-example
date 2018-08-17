@@ -10,9 +10,7 @@ composer.phar
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
 # User-specific stuff
-.idea/**/workspace.xml
 .idea/**/tasks.xml
-.idea/**/dictionaries
 .idea/**/shelf
 
 # Sensitive or high-churn files
@@ -60,3 +58,4 @@ fabric.properties
 
 .idea/
 
+/composer.json
