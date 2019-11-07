@@ -4,3 +4,4 @@ risky: false
 
 disabled:
   - concat_without_spaces
+  - cast_spaces

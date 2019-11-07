@@ -62,7 +62,7 @@ class Application
             ]
         );
 
-        $response_string = (string) $response->getBody();
+        $response_string = (string)$response->getBody();
         $dom = HtmlDomParser::str_get_html($response_string);
 
         $script = $dom->getElementByTagName('script');
