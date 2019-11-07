@@ -1,6 +1,9 @@
 <div align="center">
 <h1>Example of using Guzzle client with cookie</h1>
 </div>
+
+[![StyleCI](https://github.styleci.io/repos/151001672/shield?branch=master)](https://github.styleci.io/repos/151001672)
+
 <hr/>
 
 
