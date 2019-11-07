@@ -32,8 +32,8 @@ class Application
         $response = $this->client->get($this->base_url . $this->path,
             [
                 'headers' => [
-                    'User-Agent' => $this->user_agent
-                ]
+                    'User-Agent' => $this->user_agent,
+                ],
             ]
         );
 
@@ -45,6 +45,7 @@ class Application
         if (!is_null($code_element)) {
             $code = $code_element->text();
         }
+
         return $code;
     }
 
@@ -56,12 +57,12 @@ class Application
         $response = $this->client->get($this->base_url . $this->path,
             [
                 'headers' => [
-                    'User-Agent' => $this->user_agent
-                ]
+                    'User-Agent' => $this->user_agent,
+                ],
             ]
         );
 
-        $response_string = (string)$response->getBody();
+        $response_string = (string) $response->getBody();
         $dom = HtmlDomParser::str_get_html($response_string);
 
         $script = $dom->getElementByTagName('script');
@@ -71,7 +72,7 @@ class Application
             $script_content = $script->find('text', 0)->text();
         }
 
-        $pat = "/\\{(.*?)\\}/";
+        $pat = '/\\{(.*?)\\}/';
         preg_match($pat, $script_content, $matches);
         $content = trim($matches[1]);
         $content = trim($content, ';');
@@ -86,7 +87,7 @@ class Application
 
         $host = parse_url($this->base_url, PHP_URL_HOST);
         $cookie_jar = CookieJar::fromArray($cookie_array_prepare, $host);
+
         return $cookie_jar;
     }
-
 }
